@@ -3,57 +3,6 @@
 </h3>
 
 <hr/>
-<h3>Selector de colores:</h3>
-<button (click)="logColorSeleccionado()">MOSTRAR LOG</button>
-<input type="text" [(ngModel)]="color_seleccionado"/>
-
-<pre 
-  [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid green'"
-  [ngClass]="{
-  		fondoAzul: color_seleccionado == 'blue',
-  		fondoVerde: color_seleccionado == 'green'
-   }"
->
-	<strong>Color elegido:</strong>
-	{{color_seleccionado}}
-</pre>
-
-<div [ngStyle]="{
-		 'background':color_seleccionado, 
-		 'width': '200px',
-		 'height': '200px',
-		 'float': 'right',
-		 'margin-right': '69%'
-		 }"></div> 
-<div style="clear:both"></div>
-
-<hr/>
-	<h3>Colores switch</h3>
-	<ul [ngSwitch]="color">
-		<li *ngSwitchCase="'red'" [ngStyle]="{
-		 'background':color, 
-		 'color': 'white',
-		 'padding': '20px'
-		 }">
-		     Es de color ROJO
-		 </li>
-		 <li *ngSwitchCase="'green'" [ngStyle]="{
-		 'background':color, 
-		 'color': 'white',
-		 'padding': '20px'
-		 }">
-		     Es de color VERDE
-		 </li>
-		 <li *ngSwitchCase="'blue'" [ngStyle]="{
-		 'background':color, 
-		 'color': 'white',
-		 'padding': '20px'
-		 }">
-		     Es de color AZUL
-		 </li>
-	</ul>
-
-<hr/>
 
 <strong>Empleado estrella:</strong>
 <br/>
